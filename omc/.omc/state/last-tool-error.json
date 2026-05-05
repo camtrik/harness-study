@@ -1,0 +1,7 @@
+{
+  "tool_name": "Read",
+  "tool_input_preview": "{\"file_path\":\"/Users/ebbi/Work/harness-study/omc/CLAUDE.md\"}",
+  "error": "File does not exist. Note: your current working directory is /Users/ebbi/Work/harness-study/omc.",
+  "timestamp": "2026-05-05T07:07:00.856Z",
+  "retry_count": 1
+}
