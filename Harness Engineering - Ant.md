@@ -23,3 +23,26 @@ Coordinator-Subagent分离架构。leader agent作为协调者负责规划。不
 
 ### D5 评估与观测
 建设dashboard来观测每次会话的过程，工具调用等。  
+
+- 交互时间线， 
+	- turn1: mcp, call subagents, ask_user_question...
+	- turn2: ...
+- Harness流水线
+- 工具分析
+- 复盘总结
+
+### D6 错误复盘
+- 错误记录（ERRORS_LAERNED）：现象分析，修复措施
+- 模式沉淀（patterns.json）：提炼为结构化规则
+- lint-deps.sh：将规则物理化为检查，在直接能执行
+
+
+### 核心原则
+- 仓库是唯一事实来源：不在仓库里，agent就不可见
+- AGENTS.md是地图不是手册：80-120行，索引不存知识
+- 物理约束>软提示：lnt-deps
+- Coordinator不写代码：防止上下文损耗螺旋的首要措施
+- 每个task完成后立即验证：
+- 确定性步骤不交给模型：git, 构建，lint走脚本
+- 报错信息面向agent优化：what+why+how，一条报错就是一次教学（对agent来说）
+- 环境设计>prompt调优

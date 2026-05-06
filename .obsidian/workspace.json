@@ -185,6 +185,8 @@
   },
   "active": "13141decb7d56c00",
   "lastOpenFiles": [
+    "gsd/translation-cn",
+    "superpower/translation-cn",
     "superpower/tests/subagent-driven-dev/svelte-todo/scaffold.sh",
     "superpower/tests/subagent-driven-dev/svelte-todo/plan.md",
     "superpower/tests/subagent-driven-dev/svelte-todo/design.md",
@@ -198,8 +200,6 @@
     "superpower/tests/skill-triggering/prompts/executing-plans.txt",
     "superpower/tests/skill-triggering/prompts/dispatching-parallel-agents.txt",
     "superpower/tests/explicit-skill-requests/prompts/use-systematic-debugging.txt",
-    "superpower/tests/explicit-skill-requests/prompts/subagent-driven-development-please.txt",
-    "superpower/tests/explicit-skill-requests/prompts/skip-formalities.txt",
     "superpower/tests/claude-code/README.md",
     "欢迎.md",
     "Harness Engineering - Ant.md"
