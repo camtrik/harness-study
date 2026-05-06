@@ -2,9 +2,9 @@
 
 ## 概述
 
-一个生成 ASCII 艺术 fractals 的命令行工具。支持两种可配置输出的 fractal 类型。
+一个命令行工具，用于生成 ASCII 艺术分形图案。支持两种分形类型，输出可配置。
 
-## 使用方法
+## 用法
 
 ```bash
 # Sierpinski 三角形
@@ -25,33 +25,33 @@ fractals sierpinski --help
 
 ### `sierpinski`
 
-使用递归细分生成 Sierpinski 三角形。
+使用递归细分法生成 Sierpinski 三角形。
 
-标志:
-- `--size` (默认: 32) - 三角形底边的字符宽度
-- `--depth` (默认: 5) - 递归深度
-- `--char` (默认: '*') - 用于填充点的字符
+标志：
+- `--size`（默认：32）- 三角形底边宽度（字符数）
+- `--depth`（默认：5）- 递归深度
+- `--char`（默认：'*'）- 用于填充点的字符
 
-输出: 三角形打印到 stdout,每行一行。
+输出：三角形打印到 stdout，每行对应一行。
 
 ### `mandelbrot`
 
-将 Mandelbrot 集合渲染为 ASCII 艺术。将迭代计数映射到字符。
+以 ASCII 艺术形式渲染 Mandelbrot 集合。将迭代次数映射为字符。
 
-标志:
-- `--width` (默认: 80) - 输出字符宽度
-- `--height` (默认: 24) - 输出字符高度
-- `--iterations` (默认: 100) - 逃逸计算的最大迭代次数
-- `--char` (默认: gradient) - 单个字符,或省略以使用渐变 " .:-=+*#%@"
+标志：
+- `--width`（默认：80）- 输出宽度（字符数）
+- `--height`（默认：24）- 输出高度（字符数）
+- `--iterations`（默认：100）- 逃逸计算的最大迭代次数
+- `--char`（默认：渐变字符集）- 单个字符，省略时使用渐变字符集 " .:-=+*#%@"
 
-输出: 矩形打印到 stdout。
+输出：矩形打印到 stdout。
 
 ## 架构
 
 ```
 cmd/
   fractals/
-    main.go           # 入口点,CLI 设置
+    main.go           # 入口点，CLI 设置
 internal/
   sierpinski/
     sierpinski.go     # 算法
@@ -60,7 +60,7 @@ internal/
     mandelbrot.go     # 算法
     mandelbrot_test.go
   cli/
-    root.go           # 根命令,帮助
+    root.go           # 根命令，帮助
     sierpinski.go     # Sierpinski 子命令
     mandelbrot.go     # Mandelbrot 子命令
 ```
@@ -72,10 +72,10 @@ internal/
 
 ## 验收标准
 
-1. `fractals --help` 显示使用说明
-2. `fractals sierpinski` 输出可识别的三角形
-3. `fractals mandelbrot` 输出可识别的 Mandelbrot 集合
-4. `--size`, `--width`, `--height`, `--depth`, `--iterations` 标志工作正常
-5. `--char` 自定义输出字符
-6. 无效输入产生清晰的错误消息
+1. `fractals --help` 显示用法说明
+2. `fractals sierpinski` 输出可辨认的三角形
+3. `fractals mandelbrot` 输出可辨认的 Mandelbrot 集合
+4. `--size`、`--width`、`--height`、`--depth`、`--iterations` 标志均正常工作
+5. `--char` 可自定义输出字符
+6. 无效输入产生清晰的错误信息
 7. 所有测试通过
